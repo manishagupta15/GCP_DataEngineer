@@ -1,0 +1,104 @@
+closest data to business 
+web console -- command line sdk -- rest API 
+GRCP (googe version of remote calls) 60% faster than rest api
+
+gcloud dataproc --help
+
+big hard drive < small hard drive ** Watch SDK command and identify 
+
+us-west1
+us-west1-b
+
+MYREGION=us-west1
+MYZONE=us-west1-b
+
+coldline once a year -- gov contract
+Nearline -- Once a month
+Regional vs Multiregional( for HA)(are locations but in test is storage types) : R - in montreal - all data resides - 5:12 datacopy anytime (just in time storage)
+
+Relational db is called spanner
+
+O264547871
+
+********************************Day2
+**ANSI SQL and --> BQ, Cloud spanner, SQL but BQ not Relational database 
+**standard SQL on start of BQ
+**Nested and key syntax words
+**BQ activities can be visibl on Stack drive end point on BQ and dump the data in BQ
+Revise the use case slide very important
+**Question on sizes of each BQ(no stated size limit), BT 
+**Anything real time to PubSub
+**Create Dataset in BQ if UDF in java script running slow (Re-write SQL as most efficient) 
+**Persstent UDF -- Yes ; How many DB or tables in BQ - unlimited
+**Security is done at database level not at table level
+*Create new dataset and move thte table to new dataset and create read-only access
+*Blue screen shot -- Max number of table allowed in teh BQ (1000 tables) Views(collectin of tables) 
+**BQ faster because of columnunal structure and optimize the column in select list
+ and no Index, keys and partition
+**i ran the query and co-worker ran the query will it be charged - yes not sharing of cache data
+**whoever initite the query pays for the BQ not the project pay lol.
+**in different location dataset can be created : Yes (Germany example)
+**Evaluation process # of days for table to expire
+**All data is encrypted by default 
+**charged for storage and CPU cycle but not for batch operations 
+**you can use delete statement
+**loaded data in BQ and every often row missing or column not alignment -- default file format is avro, and happen as it was not loaded in default avro format
+**where can i load data directly to BQ -- Google drive, BT, upload, GCS are the default
+**loading data but they changed the schema : Auto detect the schema; any shape or form it' quick auto detect
+**option to save query withe personal or users in dataset
+**Every monday morning create dataset -- Run the queyr and create a new schedule query job -- save to a table or truncate the table or save to a temp table -- can process at specific location
+**ANSI union 16 tables but not in GOOGLE
+**We can user wild card in table name but how to control the _TABLE_SUFFIX in where clause
+**bq have a storage and analytics engine
+**where can you run gsutil -- web console or download google sdk (window/linux/mac)
+**WITH statement - questions - temp table --we can use subquery in BQ
+**not charged for metadata but for storage and cpu
+**execpt for nested structure everything is nullable
+**ARRAY_AGG -- get you a nested struture -- we have nested structure how would you unnest ?
+**All king of standard sql fucntions are embedded 
+**earlier it was temporary functions but now persistent as well
+
+**Windows by time in PubSub : only do by time not by size of the transfer
+
+***********Day3***to Part 9(CL)
+
+No we cannot use pandas
+
+************Day 4**11 and 12 and 13
+pubsub is world wide service
+Always replace kafka with pub sub as this is a global solution
+PS only for streaming not for batch
+7 days message are kept
+Managed service asyncroc
+Subscriber can be push or pull - **Always change to pull subscription 
+**Subscriber is missing the data -- No switch to PULL
+max size of the message 3 or 5 gb 
+fan-in-out PS doent create data what ever comes in goes out .. PS creates a copy of data and flush in 7days
+google remote procedure calls -- passing on security credentials
+Automatic timstamp is there on the record but we have to append a unique id number
+create a hash table in memory
+window-session-sliding 
+Heuristic there will be miss but faster 
+horizontal growth and sql is spanner
+SQL - BQ, Spanner, MySQl
+Bigtable slide on timeseries, ML and BD
+Indexes in BT - one per table but can have column family grouping
+hotspotting -- writing in seq process slowes down the process -- writing to one shard 
+CPU is climbing 75% what would you do to optimizie BT -- Bump up the number by 1
+can you change the location of BT cluster after its created -- no create a new one
+BT - only configure processing nodes - no change on drives how data is stored
+Yes BT records and learn from procesisng pattern ( Auto Balancing of resources)
+OPtimizing performance -- if you want to perform a test in BT how much data should you use and how long : >300GB / 5min
+Air happen what is the best -- exponentially in the option
+
+Clould datastore is document stored
+
+***********Day5
+
+Resources exceeded because forced to run on one slot --order by
+Approx aggregate function -- 
+
+
+*********************************
+
+
